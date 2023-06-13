@@ -15,8 +15,8 @@ public class Produto {
 		//Set: Atribui informação
 		//Get: Recupera informação
 		
-		public void setId(Long id) {
-			this.id = id;
+		public void setId(int i) {
+			this.id = i;
 		}
 		public Long getId() {
 			return id;
