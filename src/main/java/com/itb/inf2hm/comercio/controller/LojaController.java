@@ -14,7 +14,7 @@ import com.itb.inf2hm.comercio.model.Produto;
 @RequestMapping("/comercio/produtos")
 public class LojaController {
 
-	List<Produto> produtos = new ArrayList<Produto>();
+	List<Produto> listaDeProdutos = new ArrayList<Produto>();
 	
 	@GetMapping("/listar") 
 	
@@ -39,9 +39,11 @@ public class LojaController {
 		produto3.setCodigoBarras("0904KUV57TUF");
 		produto3.setPreco(1900.00);
 		
-		produtos.add(produto);
-		produtos.add(produto2);
-		produtos.add(produto3);
+		listaDeProdutos.add(produto);
+		listaDeProdutos.add(produto2);
+		listaDeProdutos.add(produto3);
+		
+		model.addAttribute("produtos", listaDeProdutos);
 		
 		return "produtos";
 	}
